@@ -1,0 +1,4 @@
+dataset: gowalla
+dataset_path: data/gowalla
+train_path: data/gowalla/train.txt
+test_path: data/gowalla/test.txt

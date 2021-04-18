@@ -1,0 +1,25 @@
+
+model_type: dregncf
+
+reg_weight: 5e-2
+dr_upper_bound: 70.0
+
+emb_dim: 64
+n_layers: 3
+keep_prob: 1.0
+dropout: False
+
+optimize:
+  train_epochs: 3
+  lr: 0.01
+  batch_size: 9500
+
+evaluation:
+  test_batch_size: 5000
+
+environment:
+  num_a_fold: 5
+  a_split: False
+
+ablation:
+  mode: nois

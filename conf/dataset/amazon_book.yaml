@@ -1,0 +1,4 @@
+dataset: amazon_book
+dataset_path: data/amazon-book
+train_path: data/amazon-book/train.txt
+test_path: data/amazon-book/test.txt

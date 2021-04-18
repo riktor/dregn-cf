@@ -1,0 +1,4 @@
+dataset: yelp2018
+dataset_path: data/yelp2018
+train_path: data/yelp2018/train.txt
+test_path: data/yelp2018/test.txt
