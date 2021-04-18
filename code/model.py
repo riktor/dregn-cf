@@ -166,17 +166,15 @@ class DREGN_CF(LightGCN):
 
         # construct estimated desnity ratio
         r = torch.matmul(users_emb, items_emb.t())
-
+        r = torch.nn.functional.softplus(r)
+        
         if self.cfg.ablation.mode == "full":
-            r = torch.nn.functional.softplus(r)
             base_loss = self.get_rankingDRE_loss(r, pos_mask, item_inv_prob, pi_p_user)
         elif self.cfg.ablation.mode == "nonn":
-            r = torch.nn.functional.softplus(r)
             base_loss = self.get_rankingDRE_loss_nonn(
                 r, pos_mask, item_inv_prob, pi_p_user
             )
         elif self.cfg.ablation.mode == "nois":
-            r = torch.nn.functional.softplus(r)
             base_loss = self.get_rankingDRE_loss_nois(r, pos_mask, pi_p_user)
         else:
             raise ValueError(f"unknown abltion mode {self.cfg.ablation.mode}")

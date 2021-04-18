@@ -8,7 +8,7 @@ In Proceedings of the Web Conference 2021 (WWW '21).
 
 DREGN-CF is a method based on semi-supervised density ratio estimation.
 It minimises a risk derived from the weighted Bregman divergence.
-The default implementation of DREGN-CF is the risk estimator without importance sampling.
+The default implementation of DREGN-CF uses the risk estimator without importance sampling.
 The codes are mainly based on the pytorch implementation of LightGCN by authors ([here](https://github.com/gusye1234/LightGCN-PyTorch)).
 
 ### Files
@@ -34,7 +34,7 @@ The codes are mainly based on the pytorch implementation of LightGCN by authors 
 
 ### Set up directories
 Need to prepare directories to save logs, codes (including confs), and models.
-The configuration for the directory paths are in "config.yaml".
+The configuration for the directory paths is in "config.yaml".
 ```
   $ mkdir -p runs/log runs/code_backup runs/model_backup
 ```
